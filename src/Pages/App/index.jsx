@@ -14,10 +14,14 @@ import './App.css'
 //aqui creamos una funcion con esta estructura, antes de armar el return. La vamos a encapsular mas abajo 
 const AppRoutes = () => {
   let routes = useRoutes([
-    {
-      path:'/',
-      element:<Home />
-    }
+    { path:'/', element:<Home /> },
+    { path:'/my-account', element:<MyAccount /> },
+    { path:'/my-order', element:<MyOrder /> },
+    { path:'/my-orders', element:<MyOrders /> },
+    { path:'/sign-in', element:<Signin /> },
+    //not found, se escribe con asterisco ya que representa: "Cualquier otra ruta q no este aca arriba"
+    { path:'/*', element:<NotFound /> },
+
   ])
   return routes
 }
