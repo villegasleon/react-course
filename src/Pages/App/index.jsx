@@ -8,7 +8,7 @@ import MyOrder from '../MyOrder'
 import MyOrders from '../MyOrders'
 import NotFound from '../NotFound'
 import Signin from '../SingnIn'
-//
+
 import './App.css'
 
 //aqui creamos una funcion con esta estructura, antes de armar el return. La vamos a encapsular mas abajo 
