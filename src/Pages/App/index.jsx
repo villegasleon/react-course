@@ -8,6 +8,8 @@ import MyOrder from '../MyOrder'
 import MyOrders from '../MyOrders'
 import NotFound from '../NotFound'
 import Signin from '../SingnIn'
+//importar componente Navbar, ..salimos de esa carpeta/..salimos de nuevo ahora entramos /Navbar
+import Navbar from '../../Components/Navbar'
 
 import './App.css'
 
@@ -35,6 +37,7 @@ const App = () => {
 //aqui encapsulamos la funcion "AppRoutes"    
     <BrowserRouter>
       <AppRoutes />
+      <Navbar/>
     </BrowserRouter>
   )
 }
