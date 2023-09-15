@@ -13,16 +13,15 @@ function Home() {
   }, [])
 
   return (
-
-      <Layout>
-        Home
-        {
-          items?.map(()=>{
-            return <Card/>
-          })
-        }
+    <Layout>
+      Home
+      {
+        items?.map(item=>(
+          <Card key={item.id}data={item}/>
+        ))
+      }
       </Layout>
-  )
+   )
 }
 
 export default Home
