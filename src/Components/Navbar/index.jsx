@@ -1,61 +1,98 @@
 import { NavLink } from "react-router-dom"
 
 const Navbar = () => {
+    const activeStyle = 'underline underline offset-4'
     return(
-        <nav>
-            <ul>
-                <li>
-                    <NavLink to='/'>
+        <nav className='flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light'>
+            <ul className='flex items-center gap-3'>
+                <li className='font-semibold text-lg'>
+                    <NavLink 
+                        to="/">
                         Shopi
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/'>
+                    <NavLink 
+                        to='/'
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? activeStyle: undefined
+                        }>        
                         All
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/clothes'>
+                    <NavLink 
+                        to='/clothes'
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? activeStyle: undefined
+                            }>  
                         Clothes
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/electronics'>
+                    <NavLink 
+                        to='/electronics'
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? activeStyle: undefined
+                            }>  
                         Electronics
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/fornitures'>
+                    <NavLink 
+                        to='/fornitures'
+                            className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? activeStyle: undefined
+                            }>  
                         Fornitures
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/toys'>
-                        Toys
+                    <NavLink 
+                    to='/toys'
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? activeStyle: undefined
+                    }>  
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/others'>
+                    <NavLink 
+                    to='/others'
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? activeStyle: undefined
+                    }>  
                         Others
                     </NavLink>
                 </li>
             </ul>
-            <ul>
+            <ul className='flex items-center gap-3'>
                 <li>
                     hvill@gmail.com
                 </li>
                 <li>
-                    <NavLink to='/my-orders'>
+                    <NavLink 
+                        to='/my-orders'
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? activeStyle: undefined
+                            }>  
                         My Orders
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/my-account'>
+                    <NavLink 
+                        to='/my-account'
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? activeStyle: undefined
+                        }>  
                         My Account
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/sign-in'>
+                    <NavLink 
+                        to='/sign-in'
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? activeStyle: undefined
+                        }>  
                         Sign In
                     </NavLink>
                 </li>
