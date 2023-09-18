@@ -1,6 +1,8 @@
 //importamos nuestro hook use routes, antes debimos haber instalado npm intall react-routes-dom. Tambien 
 //importamos browserRouter dentro del hook
 import { useRoutes, BrowserRouter } from 'react-router-dom'
+//Traemos nuestro wrapper de Provider que creamos en index.jsx de Context para proveer este componente a los demas compponentes d ela App
+import { ShoppingCartProvider } from '../../Context'
 //importamos nuestro Home, el .. significa salir de esta carpeta y ahi encontrara carpeta Home
 import Home from '../Home'
 import MyAccount from '../MyAccount'
@@ -35,10 +37,13 @@ const AppRoutes = () => {
 const App = () => {
   return (
 //aqui encapsulamos la funcion "AppRoutes"    
-    <BrowserRouter>
-      <AppRoutes />
-      <Navbar/>
-    </BrowserRouter>
+    <ShoppingCartProvider>
+      <BrowserRouter>
+        <AppRoutes />
+        <Navbar/>
+      </BrowserRouter>
+    </ShoppingCartProvider>
+
   )
 }
 
