@@ -3,6 +3,7 @@ import { ShoppingCartContext } from '../../Context'
 
 
 const Card=(data) =>{
+    //aqui lo q le estamos diciendo es que lea el estado global
     const context = useContext(ShoppingCartContext)
     return (
         <div className='bg-white cursor-pointer w-56 h-60 rounded-lg'>
