@@ -15,14 +15,17 @@ const ProductDetail = ()=>{
                 {/* En el icono de la "x" para cerrar la vista detallada, agregamos un onClick que trae del contexto
                 la logica para cerrar la ventana  */}
                 <div>
-                    <IconX color="black" size={10} className='h-6 w-6 text-black'
+                    <IconX color="black" size={10} className='h-6 w-6 text-black cursor-pointer'
                     onClick={()=> context.closeProductDetail()}></IconX>
                 </div>
             </div>
                 {/*Aqui creamos nuestra figure, aqui va a pintar el titulo y la imagen  */}
                 <figure className='px-6'>
                     <img className='w-full h-full rounded-lg' 
-                    src= {context.productToShow.images} 
+//Aqui nos daba un error, donde no cargaba la pagina, debido a que pusimos tomar la primera imagen q encontrara
+//y cuando volvia a iniciar la pagina era undefined, se corrigio validando: src= {context.productToShow.images?.[0]} 
+//en lugar de : src= {context.productToShow.images[0]}    
+                    src= {context.productToShow.images?.[0]} 
                     alt={context.productToShow.title}/> 
                 </figure>
                 {/*Aqui creamos el texto q llevara la card como precio, titulo y descripcion  */}
