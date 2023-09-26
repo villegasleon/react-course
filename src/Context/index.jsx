@@ -11,9 +11,13 @@ export const ShoppingCartProvider = ({children})=>{
     //funcion para modificar para abrir y cerrar el product detail
     const openProductDetail = ()=>setIsProductDetailOpen(true)
     const closeProductDetail = ()=>setIsProductDetailOpen(false)
-
-    //Product detail  Show product, debemos traer lo que esta en la card q por defecto sera un objeto vacio
+    //Product detail  Show product, debemos traer lo que esta en la card q por defecto sera un objeto vacio,
+    //por eso lo representamos de esta manera => {}
     const [productToShow, setProductToShow]= useState({})
+    //una funcion que agregue el producto en el carrito, aqui en la documentacion de la API, se dice que lo que
+    //devuelve es un array, una lista de objetos, por eso lo representamos asi: []
+    const [cartProducts, setCartProducts]= useState([])
+
 
     return(
         <ShoppingCartContext.Provider value={{
@@ -23,7 +27,9 @@ export const ShoppingCartProvider = ({children})=>{
             closeProductDetail,
             isProductDetailOpen,
             productToShow,
-            setProductToShow             
+            setProductToShow,
+            cartProducts,
+            setCartProducts             
         }}>
         {children}
         </ShoppingCartContext.Provider>
