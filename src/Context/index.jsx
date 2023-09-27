@@ -11,6 +11,11 @@ export const ShoppingCartProvider = ({children})=>{
     //funcion para modificar para abrir y cerrar el product detail
     const openProductDetail = ()=>setIsProductDetailOpen(true)
     const closeProductDetail = ()=>setIsProductDetailOpen(false)
+    //CheckOutSideMenu - Open Close
+    const [isCheckOutSideMenuOpen, setIsCheckOutSideMenuOpen]= useState(false) 
+    const openCheckOutSideMenu = ()=>setIsCheckOutSideMenuOpen(true)
+    const closeCheckOutSideMenu = ()=>setIsCheckOutSideMenuOpen(false)
+
     //Product detail  Show product, debemos traer lo que esta en la card q por defecto sera un objeto vacio,
     //por eso lo representamos de esta manera => {}
     const [productToShow, setProductToShow]= useState({})
@@ -29,7 +34,12 @@ export const ShoppingCartProvider = ({children})=>{
             productToShow,
             setProductToShow,
             cartProducts,
-            setCartProducts             
+            setCartProducts,
+            isCheckOutSideMenuOpen,
+            openCheckOutSideMenu,
+            closeCheckOutSideMenu
+
+
         }}>
         {children}
         </ShoppingCartContext.Provider>
