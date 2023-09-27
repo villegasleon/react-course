@@ -12,6 +12,7 @@ import NotFound from '../NotFound'
 import Signin from '../SingnIn'
 //importar componente Navbar, ..salimos de esa carpeta/..salimos de nuevo ahora entramos /Navbar
 import Navbar from '../../Components/Navbar'
+import CheckOutSlideMenu from '../../Components/CheckOutSlideMenu'
 
 import './App.css'
 
@@ -41,6 +42,7 @@ const App = () => {
       <BrowserRouter>
         <AppRoutes />
         <Navbar/>
+        <CheckOutSlideMenu/>
       </BrowserRouter>
     </ShoppingCartProvider>
 

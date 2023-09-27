@@ -8,9 +8,9 @@ const CheckOutSideMenu = ()=>{
 
     return(
         <aside 
-        className={`${context.isCheckOutSideMenuOpen ? 'flex' : 'hidden'} product-detail flex-col fixed right-0 border border-black rounded-lg bg-white`}>
+        className={`${context.isCheckOutSideMenuOpen ? 'flex' : 'hidden'} checkout-side-menu flex-col fixed right-0 border border-black rounded-lg bg-white`}>
             <div className='flex justify-between items-center p-6'>
-                <h2 className='font-medium text-xl'>Detail</h2>
+                <h2 className='font-medium text-xl'>My Order</h2>
                 <div>
                     <IconX color="black" size={10} className='h-6 w-6 text-black cursor-pointer'
                     onClick={()=> context.closeCheckOutSideMenu()}></IconX>
@@ -20,4 +20,4 @@ const CheckOutSideMenu = ()=>{
 
     )
 }
-export default CheckOutSlideMenu
+export default CheckOutSideMenu
