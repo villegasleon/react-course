@@ -38,8 +38,6 @@ export const ShoppingCartProvider = ({children})=>{
             isCheckOutSideMenuOpen,
             openCheckOutSideMenu,
             closeCheckOutSideMenu
-
-
         }}>
         {children}
         </ShoppingCartContext.Provider>
