@@ -3,6 +3,7 @@ import { IconX } from '@tabler/icons-react';
 import './styles.css'
 import { ShoppingCartContext } from '../../Context';
 import OrderCard from '../../Components/OrderCard';
+import {totalPrice} from '../utils/index';
 
 const CheckOutSideMenu = ()=>{
     const context= useContext(ShoppingCartContext)
@@ -26,12 +27,19 @@ const CheckOutSideMenu = ()=>{
                     title ={product.title}
                     imageUrl={product.images}
                     price={product.price}
+                    handleDelete = {handleDelete}
                     />
                 ))
             }
             </div>
+            <div className='px-6'>
+                <p>
+                    <span>Total : </span>
+                    {/* le pasamos una funcion parametrizada, que traemos del context */}
+                    <span>${totalPrice(context.cartProducts)}</span>
+                </p>
+            </div>
         </aside>
-
     )
 }
 export default CheckOutSideMenu
