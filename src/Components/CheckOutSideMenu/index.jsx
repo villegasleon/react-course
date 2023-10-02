@@ -6,7 +6,7 @@ import OrderCard from '../../Components/OrderCard';
 
 const CheckOutSideMenu = ()=>{
     const context= useContext(ShoppingCartContext)
-    console.log('CART: ', context.cartProducts)
+    //console.log('CART: ', context.cartProducts)
 
     return(
         <aside 
@@ -18,7 +18,7 @@ const CheckOutSideMenu = ()=>{
                     onClick={()=> context.closeCheckOutSideMenu()}></IconX>
                 </div>
             </div>
-            <div className='px-6'>   
+            <div className='px-6 overflow-y-scroll'>   
             {
                 context.cartProducts.map(product =>(
                     <OrderCard 
